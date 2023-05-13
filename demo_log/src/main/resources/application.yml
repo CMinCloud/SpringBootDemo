@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info   #设置日志级别为debug，日志会显示debug及以上级别（默认为info）
+#    设置日志格式
+  pattern:
+  file:
+    name: server.log    #将日志记录到文件
+#    console: "%d - %m %n"

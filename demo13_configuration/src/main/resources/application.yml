@@ -1,0 +1,12 @@
+servers:
+  ipAddress: 127.0.0.1
+  port: 8080
+  timeout: -1
+  ServerTimeOut: 3m
+  dataSize: 20MB
+
+
+datasource:
+  driverClassName: com.mysql.cj.jdbc.com
+  password: 0507
+

@@ -1,0 +1,17 @@
+spring:
+  redis:
+    port: 6379
+    host: 47.109.59.20
+    password: 403630
+    client-type: lettuce   #切换客户端类型为jedis   默认lettuce
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0 #最小空闲连接
+        max-wait: 100ms  #连接等待时间
+    #        jedis属性
+    jedis:
+      pool:       # 设置连接池
+        max-active: 8
+

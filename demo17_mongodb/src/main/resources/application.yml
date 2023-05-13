@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost/cm   #cm为mongodb中的数据库名
+

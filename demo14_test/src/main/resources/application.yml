@@ -1,0 +1,39 @@
+server:
+  #端口
+  port: 8080
+
+#数据库资源
+spring:
+  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_db
+    username: root
+    password: 1234
+  main:
+    banner-mode: off  #闭springboot图标
+
+mybatis-plus:
+  #  mapper-locations: classpath:mapper/*.xml   #  设置xml映射地址
+  #  type-aliases-package: com.itheima.domain   #  设置mybatis对应实体类包地址
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl      # 开启日志
+  #    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl     # 关闭日志
+  global-config:
+    banner: off   #    关闭mybatis日志
+    db-config:
+      table-prefix: tbl_    # 数据库表名前缀
+      id-type: auto   #id自增
+#    mybatisPlus会自动开启驼峰命名转换，如果在实体类中设置好了，这里需要更改为false
+#    map-underscore-to-camel-case: false
+
+# 自定义随机属性
+testcase:
+  book:
+    id: ${random.int}
+    name: CM${random.value}     # CM会自动写死并累加后面的值
+    uuid: ${random.uuid}
+    publishTime: ${random.long}
+
+
+
